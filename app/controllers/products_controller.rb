@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def one_product
-    @product = Product.first
+    @product = Product.find_by(id: params["id"])
     render :show
   end
 end
