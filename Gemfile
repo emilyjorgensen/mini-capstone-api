@@ -72,3 +72,6 @@ end
 
 # Cross-Origin Resource Sharing (CORS)
 gem "rack-cors"
+
+# seed dumpt to pull data from database and fill the seeds.rb file
+gem "seed_dump"
