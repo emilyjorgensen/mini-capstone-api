@@ -16,7 +16,11 @@ class ProductsController < ApplicationController
       image_url: params["image_url"],
       description: params["description"],
     )
-    render :show
+    if @product.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @product.errors.full_messages }, status: unprocessable_entity
+    end
   end
 
   def update
@@ -27,7 +31,11 @@ class ProductsController < ApplicationController
       image_url: params["image_url"] || @product.image_url,
       description: params["description"] || @product.description,
     )
-    render :show
+    if @product.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @product.errors.full_messages }, status: unprocessable_entity
+    end
   end
 
   def destroy
