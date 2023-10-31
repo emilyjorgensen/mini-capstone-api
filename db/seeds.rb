@@ -14,3 +14,6 @@
 
 # product = Product.new(name: "reading light", price: 14, image_url: nil, description: "Late nights look better with this reading light in hand!")
 # product.save
+
+# supplier = Supplier.create(name: "Martin Matta", email: "martinmatta@example.com", phone_number: "123-456-7890")
+# supplier = Supplier.create(name: "Darrin Kramer", email: "darrinkramer@example.com", phone_number: "098-765-4321")
