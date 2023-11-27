@@ -35,4 +35,6 @@ class Product < ApplicationRecord
   # end
 
   has_many :orders
+
+  has_many :catetory_products
 end
