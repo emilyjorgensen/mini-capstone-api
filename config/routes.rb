@@ -15,9 +15,10 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
+  post "/carted_products" => "carted_products#create"
+  get "/carted_products" => "carted_products#index"
+
   post "/orders" => "orders#create"
   get "/orders/:id" => "orders#show"
   get "/orders" => "orders#index"
-
-  post "/carted_products" => "carted_products#create"
 end
